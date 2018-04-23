@@ -1,3 +1,5 @@
+ZSH_CUSTOM=$HOME/.zsh-custom
+
 # Load antigen
 source ~/.antigen/antigen.zsh
 
@@ -13,7 +15,11 @@ antigen bundle docker-compose
 antigen bundle docker-machine
 antigen bundle git
 antigen bundle rvm
+antigen bundle common-aliases
 antigen bundle iamthememory/homesick-zsh-completion
+
+# custom
+antigen bundle $ZSH_CUSTOM/plugins/autocd-workspace --no-local-clone
 
 #
 # Antigen theme
