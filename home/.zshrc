@@ -6,15 +6,32 @@ antigen use oh-my-zsh
 #
 # Antigen bundles
 #
+
+# themes
 antigen bundle caiogondim/bullet-train-oh-my-zsh-theme 
+
+# general
 antigen bundle common-aliases
+
+# docker
 antigen bundle docker
 antigen bundle docker-compose
-antigen bundle docker-machine
+antigen bundle unixorn/docker-helpers.zshplugin
+
+# git
 antigen bundle git
+
+# homesick
 antigen bundle iamthememory/homesick-zsh-completion
+
+# node
 antigen bundle nvm
+
+# ruby
 antigen bundle rvm
+
+# tmux
+antigen bundle tmux
 
 # custom
 antigen bundle $ZSH_BASE/plugins/autocd-workspace --no-local-clone
@@ -27,6 +44,8 @@ antigen theme caiogondim/bullet-train-oh-my-zsh-theme
 antigen apply
 
 #
-# Global Configuration
+# Configuration
 #
+
+# Global
 zstyle ':completion:*' special-dirs true
