@@ -1,9 +1,6 @@
-ZSH_CUSTOM=$HOME/.zsh-custom
+ZSH_BASE=$HOME/.zsh
+source $ZSH_BASE/antigen/antigen.zsh
 
-# Load antigen
-source ~/.antigen/antigen.zsh
-
-# Load oh-my-zsh
 antigen use oh-my-zsh
 
 #
@@ -20,7 +17,7 @@ antigen bundle nvm
 antigen bundle rvm
 
 # custom
-antigen bundle $ZSH_CUSTOM/plugins/autocd-workspace --no-local-clone
+antigen bundle $ZSH_BASE/plugins/autocd-workspace --no-local-clone
 
 #
 # Antigen theme
@@ -29,4 +26,7 @@ antigen theme caiogondim/bullet-train-oh-my-zsh-theme
 
 antigen apply
 
+#
+# Global Configuration
+#
 zstyle ':completion:*' special-dirs true
