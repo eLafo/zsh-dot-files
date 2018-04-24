@@ -49,3 +49,4 @@ antigen apply
 
 # Global
 zstyle ':completion:*' special-dirs true
+export EDITOR='vim'
