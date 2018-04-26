@@ -13,6 +13,7 @@ antigen bundle caiogondim/bullet-train-oh-my-zsh-theme
 # general
 antigen bundle common-aliases
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 
 # docker
 antigen bundle docker
