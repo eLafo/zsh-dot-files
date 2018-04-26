@@ -15,6 +15,7 @@ antigen bundle common-aliases
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle extract
+antigen bundle z
 
 # docker
 antigen bundle docker
