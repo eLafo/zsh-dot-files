@@ -25,6 +25,7 @@ antigen bundle unixorn/docker-helpers.zshplugin
 # git
 antigen bundle git
 
+
 # homesick
 antigen bundle iamthememory/homesick-zsh-completion
 
@@ -40,7 +41,7 @@ antigen bundle tmuxinator
 
 # custom
 antigen bundle $ZSH_BASE/plugins/autocd-workspace --no-local-clone
-antigen bundle $ZSH_BASE/plugins/tmuxinator --no-local-clone
+antigen bundle $ZSH_BASE/plugins/custom-aliases --no-local-clone
 
 #
 # Antigen theme
