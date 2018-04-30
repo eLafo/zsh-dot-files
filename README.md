@@ -8,7 +8,7 @@
 ```zsh
 homesick clone elafo/zsh-dot-files
 homesick link zsh-dot-files
-
+```
 # Themes
 
 - [bullet-train](https://github.com/caiogondim/bullet-train-oh-my-zsh-them) 
