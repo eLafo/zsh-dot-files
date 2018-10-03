@@ -22,6 +22,9 @@ antigen bundle docker
 antigen bundle docker-compose
 antigen bundle unixorn/docker-helpers.zshplugin
 
+# kubernetes
+antigen bundle kubectl
+
 # git
 antigen bundle git
 
@@ -60,6 +63,9 @@ antigen apply
 zstyle ':completion:*' special-dirs true
 export EDITOR='vim'
 
+export BULLETTRAIN_KCTX_KCONFIG=/home/elafo/.kube/config
+BULLETTRAIN_PROMPT_ORDER+=(kctx)
+
 #
 # Hack (asdf completion does not work when installed via antigen 
 # https://github.com/asdf-vm/asdf/issues/97
@@ -69,3 +75,6 @@ export EDITOR='vim'
 if [ -f $ASDF_DIR/completions/asdf.bash ]; then
     . $ASDF_DIR/completions/asdf.bash
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
