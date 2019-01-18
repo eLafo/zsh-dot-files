@@ -25,6 +25,9 @@ antigen bundle unixorn/docker-helpers.zshplugin
 # kubernetes
 antigen bundle kubectl
 
+# helm
+antigen bundle helm
+
 # git
 antigen bundle git
 
