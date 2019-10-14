@@ -33,7 +33,6 @@ antigen bundle iamthememory/homesick-zsh-completion
 antigen bundle nvm
 
 # ruby
-antigen bundle rvm
 antigen bundle rbenv
 
 # tmux & tmuxinator
@@ -58,6 +57,3 @@ antigen apply
 # Global
 zstyle ':completion:*' special-dirs true
 export EDITOR='vim'
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
