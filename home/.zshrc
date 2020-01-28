@@ -47,6 +47,7 @@ antigen bundle $ZSH_BASE/plugins/custom-aliases --no-local-clone
 # Antigen theme
 #
 antigen theme caiogondim/bullet-train-oh-my-zsh-theme 
+export BULLETTRAIN_VIRTUALENV_FG=black
 
 antigen apply
 
