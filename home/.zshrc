@@ -26,11 +26,18 @@ antigen bundle greymd/docker-zsh-completion
 # git
 antigen bundle git
 
+# go
+antigen bundle golang
+antigen bundle bbenne10/goenv
+
 # homesick
 antigen bundle iamthememory/homesick-zsh-completion
 
 # node
 antigen bundle nvm
+
+# python
+antigen bundle pyenv
 
 # ruby
 antigen bundle rbenv
@@ -58,3 +65,5 @@ antigen apply
 # Global
 zstyle ':completion:*' special-dirs true
 export EDITOR='vim'
+eval "$(goenv init -)"
+
