@@ -67,3 +67,7 @@ zstyle ':completion:*' special-dirs true
 export EDITOR='vim'
 eval "$(goenv init -)"
 
+# Flutter
+export PATH="$PATH:/Users/elafo/workspace/flutter-dev/flutter/bin"
+
+
