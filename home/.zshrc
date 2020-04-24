@@ -66,3 +66,10 @@ antigen apply
 zstyle ':completion:*' special-dirs true
 export EDITOR='vim'
 eval "$(goenv init -)"
+
+# Flutter
+export PATH="$PATH:$HOME/workspace/tools/flutter/bin"
+
+# pyenv
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+eval "$(pyenv virtualenv-init -)"
