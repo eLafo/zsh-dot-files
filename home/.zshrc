@@ -38,10 +38,6 @@ antigen bundle pyenv
 # ruby
 antigen bundle rbenv
 
-# tmux & tmuxinator
-antigen bundle tmux
-antigen bundle tmuxinator
-
 # custom
 antigen bundle $ZSH_BASE/plugins/autocd-workspace --no-local-clone
 antigen bundle $ZSH_BASE/plugins/custom-aliases --no-local-clone
