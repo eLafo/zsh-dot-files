@@ -62,5 +62,7 @@ export EDITOR='vim'
 export PATH="$PATH:$HOME/workspace/tools/flutter/bin"
 
 # pyenv
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-eval "$(pyenv virtualenv-init -)"
+if [ -x "$(command -v pyenv)" ]; then
+  export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+  eval "$(pyenv virtualenv-init -)"
+fi
