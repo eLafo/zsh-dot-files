@@ -26,10 +26,6 @@ antigen bundle greymd/docker-zsh-completion
 # git
 antigen bundle git
 
-# go
-antigen bundle golang
-antigen bundle bbenne10/goenv
-
 # homesick
 antigen bundle iamthememory/homesick-zsh-completion
 
@@ -65,7 +61,6 @@ antigen apply
 # Global
 zstyle ':completion:*' special-dirs true
 export EDITOR='vim'
-eval "$(goenv init -)"
 
 # Flutter
 export PATH="$PATH:$HOME/workspace/tools/flutter/bin"
