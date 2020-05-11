@@ -1,3 +1,17 @@
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/.asdf/completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 ZSH_BASE=$HOME/.zsh
 source $ZSH_BASE/antigen/antigen.zsh
 
@@ -6,9 +20,6 @@ antigen use oh-my-zsh
 #
 # Antigen bundles
 #
-
-# themes
-antigen bundle caiogondim/bullet-train-oh-my-zsh-theme 
 
 # general
 antigen bundle common-aliases
@@ -31,15 +42,6 @@ antigen bundle git
 # homesick
 antigen bundle iamthememory/homesick-zsh-completion
 
-# node
-antigen bundle nvm
-
-# python
-antigen bundle pyenv
-
-# ruby
-antigen bundle rbenv
-
 # custom
 antigen bundle $ZSH_BASE/plugins/autocd-workspace --no-local-clone
 antigen bundle $ZSH_BASE/plugins/custom-aliases --no-local-clone
@@ -47,8 +49,7 @@ antigen bundle $ZSH_BASE/plugins/custom-aliases --no-local-clone
 #
 # Antigen theme
 #
-antigen theme caiogondim/bullet-train-oh-my-zsh-theme 
-export BULLETTRAIN_VIRTUALENV_FG=black
+antigen theme romkatv/powerlevel10k
 
 antigen apply
 
@@ -57,14 +58,8 @@ antigen apply
 #
 
 # Global
-zstyle ':completion:*' special-dirs true
+# zstyle ':completion:*' special-dirs true
 export EDITOR='vim'
 
-# Flutter
-export PATH="$PATH:$HOME/workspace/tools/flutter/bin"
-
-# pyenv
-if [ -x "$(command -v pyenv)" ]; then
-  export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-  eval "$(pyenv virtualenv-init -)"
-fi
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
