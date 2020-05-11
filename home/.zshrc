@@ -16,6 +16,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle extract
 
+# asdf
+antigen bundle asdf
+
 # docker
 antigen bundle docker
 antigen bundle docker-compose
