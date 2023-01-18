@@ -27,9 +27,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle extract
 
-# asdf
-antigen bundle asdf
-
 # docker
 antigen bundle docker
 antigen bundle docker-compose
@@ -41,6 +38,9 @@ antigen bundle git
 
 # homesick
 antigen bundle iamthememory/homesick-zsh-completion
+
+# rbenv
+antigen bundle rbenv
 
 # custom
 antigen bundle $ZSH_BASE/plugins/autocd-workspace --no-local-clone
@@ -63,3 +63,13 @@ export EDITOR='vim'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
