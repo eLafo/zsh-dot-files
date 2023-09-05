@@ -52,6 +52,7 @@ export PATH
 # custom
 antigen bundle $ZSH_BASE/plugins/autocd-workspace --no-local-clone
 antigen bundle $ZSH_BASE/plugins/custom-aliases --no-local-clone
+antigen bundle $ZSH_BASE/plugins/poetry --no-local-clone
 
 #
 # Antigen theme
