@@ -42,6 +42,10 @@ antigen bundle iamthememory/homesick-zsh-completion
 # rbenv
 antigen bundle rbenv
 
+# poetry
+antigen bundle darvid/zsh-poetry
+export ZSH_POETRY_AUTO_ACTIVATE=1
+export ZSH_POETRY_AUTO_DEACTIVATE=1
 # python
 antigen bundle pyenv
 antigen bundle virtualenv
