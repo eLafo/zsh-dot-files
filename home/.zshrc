@@ -1,4 +1,5 @@
 if type brew &>/dev/null; then
+
   FPATH=$(brew --prefix)/.asdf/completions:$FPATH
 
   autoload -Uz compinit
@@ -30,7 +31,6 @@ antigen bundle extract
 # docker
 antigen bundle docker
 antigen bundle docker-compose
-antigen bundle docker-machine
 antigen bundle greymd/docker-zsh-completion
 
 # git
@@ -38,6 +38,9 @@ antigen bundle git
 
 # homesick
 antigen bundle iamthememory/homesick-zsh-completion
+
+# brew
+antigen bundle brew
 
 # rbenv
 antigen bundle rbenv
@@ -81,6 +84,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# rbenv
+eval "$(rbenv init - zsh)"
 # pyenv
 # export PYENV_ROOT="$HOME/.pyenv"
 # command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
