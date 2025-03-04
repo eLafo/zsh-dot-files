@@ -58,6 +58,9 @@ antigen bundle pipenv
 path+=("$HOME/.local/bin")
 export PATH
 
+# jenv
+antigen bundle jenv
+
 # Custom
 antigen bundle $ZSH_BASE/plugins/autocd-workspace --no-local-clone
 antigen bundle $ZSH_BASE/plugins/custom-aliases --no-local-clone
@@ -84,3 +87,41 @@ export NVM_DIR="$HOME/.nvm"
 
 # Rbenv
 eval "$(rbenv init - zsh)"
+
+
+# >>> nvwb
+# Sourcing the nvwb wrapper function was added during the NVIDIA AI Workbench installation and
+# is required for NVIDIA AI Workbench to function properly. When uninstalling
+# NVIDIA AI Workbench, it will be removed. 
+
+source $HOME/.local/share/nvwb/nvwb-wrapper.sh
+# >>> nvwb
+
+
+[[ -s "/Users/elafo/.gvm/scripts/gvm" ]] && source "/Users/elafo/.gvm/scripts/gvm"
+
+export PHPENV_ROOT="/Users/elafo/.phpenv"
+if [ -d "${PHPENV_ROOT}" ]; then
+  export PATH="${PHPENV_ROOT}/bin:${PATH}"
+  eval "$(phpenv init -)"
+fi
+
+eval "$(phpenv init -)"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/Users/elafo/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/Users/elafo/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+
+
+# Herd injected PHP 8.3 configuration.
+export HERD_PHP_83_INI_SCAN_DIR="/Users/elafo/Library/Application Support/Herd/config/php/83/"
+
+
+# Herd injected PHP binary.
+export PATH="/Users/elafo/Library/Application Support/Herd/bin/":$PATH
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/elafo/Library/Application Support/Herd/config/php/84/"
+
+# Added by Windsurf
+export PATH="/Users/elafo/.codeium/windsurf/bin:$PATH"
