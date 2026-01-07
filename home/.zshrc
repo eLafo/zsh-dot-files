@@ -18,6 +18,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 ZSH_BASE=$HOME/.zsh
+
+# Set ZSH_CACHE_DIR before Antigen loads oh-my-zsh plugins
+# (Antigen doesn't set this properly, causing cache errors)
+export ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/oh-my-zsh"
+[[ -d "$ZSH_CACHE_DIR/completions" ]] || mkdir -p "$ZSH_CACHE_DIR/completions"
+
 source $ZSH_BASE/antigen/antigen.zsh
 
 antigen use oh-my-zsh
