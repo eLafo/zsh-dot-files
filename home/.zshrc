@@ -86,16 +86,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Rbenv
-eval "$(rbenv init - zsh)"
+if command -v rbenv &>/dev/null; then
+  eval "$(rbenv init - zsh)"
+fi
 
 
-# >>> nvwb
-# Sourcing the nvwb wrapper function was added during the NVIDIA AI Workbench installation and
-# is required for NVIDIA AI Workbench to function properly. When uninstalling
-# NVIDIA AI Workbench, it will be removed. 
-
-source $HOME/.local/share/nvwb/nvwb-wrapper.sh
-# >>> nvwb
 
 
 [[ -s "/Users/elafo/.gvm/scripts/gvm" ]] && source "/Users/elafo/.gvm/scripts/gvm"
@@ -106,7 +101,6 @@ if [ -d "${PHPENV_ROOT}" ]; then
   eval "$(phpenv init -)"
 fi
 
-eval "$(phpenv init -)"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Users/elafo/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/Users/elafo/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
