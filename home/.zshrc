@@ -89,15 +89,6 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(rbenv init - zsh)"
 
 
-# >>> nvwb
-# Sourcing the nvwb wrapper function was added during the NVIDIA AI Workbench installation and
-# is required for NVIDIA AI Workbench to function properly. When uninstalling
-# NVIDIA AI Workbench, it will be removed. 
-
-source $HOME/.local/share/nvwb/nvwb-wrapper.sh
-# >>> nvwb
-
-
 [[ -s "/Users/elafo/.gvm/scripts/gvm" ]] && source "/Users/elafo/.gvm/scripts/gvm"
 
 export PHPENV_ROOT="/Users/elafo/.phpenv"
@@ -125,3 +116,27 @@ export HERD_PHP_84_INI_SCAN_DIR="/Users/elafo/Library/Application Support/Herd/c
 
 # Added by Windsurf
 export PATH="/Users/elafo/.codeium/windsurf/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/elafo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/elafo/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/elafo/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/elafo/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# pnpm
+export PNPM_HOME="/Users/elafo/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# Added by Antigravity
+export PATH="/Users/elafo/.antigravity/antigravity/bin:$PATH"
+
+# bun completions
+[ -s "/Users/elafo/.bun/_bun" ] && source "/Users/elafo/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
